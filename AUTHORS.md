@@ -2,5 +2,5 @@ nfinder is written and maintained by Santiago N. Rodriguez Alvarez <rodriguezsan
 
 Other contributors, listed alphabetically, are
 
-* Bruno Moretti <bmoretti@df.uba.ar>
+* Bruno Moretti <morettibruno@gmail.com>
 * Hernan E. Grecco <hgrecco@df.uba.ar>.
