@@ -1,5 +1,5 @@
 # nfinder
-Automatic inference of neighbooring cells based on their Delaunay triangulation.
+Automatic inference of neighboring cells based on their Delaunay triangulation.
 
 ## Dependencies
 - python 3.8.5
