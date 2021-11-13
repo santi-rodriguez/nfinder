@@ -3,7 +3,7 @@ Automatic inference of neighboring cells based on their Delaunay triangulation.
 
 ## Dependencies 
 nfinder was tested with:
-- python = 3.8
+- python = 3.8.5
 - napari = 0.4.12
 - numpy = 1.21.2
 - pandas = 1.3.4
