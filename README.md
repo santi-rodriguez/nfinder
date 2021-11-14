@@ -21,7 +21,7 @@ pip install nfinder
 ```
 
 
-## Examples
+## Usage
 For usage examples, please check out the [notebook](https://github.com/santi-rodriguez/nfinder/blob/main/examples.ipynb) in our GitHub repository.
 
 
