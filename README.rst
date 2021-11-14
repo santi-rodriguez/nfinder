@@ -20,5 +20,9 @@ nfinder was tested with:
 
 - scipy = 1.7.1
 
+Examples
+--------
+For usage examples, please check out the file examples.ipynb in this repository.
+
 
 
