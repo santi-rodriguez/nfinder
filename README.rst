@@ -22,7 +22,9 @@ nfinder was tested with:
 
 Examples
 --------
-For usage examples, please check out the file examples.ipynb in this repository.
+For usage examples, please check out the notebook_ in our GitHub repository.
+
+.. _notebook: https://github.com/santi-rodriguez/nfinder/blob/main/examples.ipynb
 
 
 
