@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import napari
 
-def plot_layout(points, node_size=5, img=None, cmap='gray', color='white', ax=None, viewer=None):
+def plot_layout(points, node_size=5, img=None, cmap='gray', color='white', ax=None, viewer=None, scale=None):
     """Plot positions of nodes. If 'img' is not None, this function shows the overlap between the positions of nodes and the given image."""
     if points.shape[1]<=2:
         if ax is None:
@@ -20,14 +20,14 @@ def plot_layout(points, node_size=5, img=None, cmap='gray', color='white', ax=No
         if viewer is None:
             viewer = napari.Viewer()
         if img is not None:
-            viewer.add_image(img[:, :, :, 1], gamma=0.35, colormap='green', rendering='average', name='membrane')
-            viewer.add_image(img[:, :, :, 0], gamma=0.25, opacity=0.7, colormap='red', rendering='average', name='nuclei')
-        viewer.add_points(points, size=node_size/2, opacity=0.3, edge_color=color, face_color=color, name='centroids')
+            viewer.add_image(img[:, :, :, 1], gamma=0.35, colormap='green', rendering='average', scale=scale, name='membrane')
+            viewer.add_image(img[:, :, :, 0], gamma=0.25, opacity=0.7, colormap='red', rendering='average', scale=scale, name='nuclei')
+        viewer.add_points(points, size=node_size/2, opacity=0.3, edge_color=color, face_color=color, scale=scale, name='centroids')
         return viewer
     
     
 
-def plot_neighbors_graph(points, edges, color='white', ax=None, **kwargs):
+def plot_neighbors_graph(points, edges, color='white', scale=None, ax=None, **kwargs):
     """Plot the neighbors graph given by set points and edge positions."""
     #If edges contains node indexes, convert them to spatial positions
     ndim = edges.ndim
@@ -51,8 +51,8 @@ def plot_neighbors_graph(points, edges, color='white', ax=None, **kwargs):
         return ax
     
     else:
-        viewer = plot_layout(points, color=color, **kwargs)
-        viewer.add_shapes(edges, shape_type='line', opacity=0.3, edge_width=0.5, edge_color=color, name='edges')
+        viewer = plot_layout(points, color=color, scale=scale, **kwargs)
+        viewer.add_shapes(edges, shape_type='line', opacity=0.3, edge_width=0.5, edge_color=color, name='edges', scale=scale)
 
 
 def plot_overlap(img, points, edges, show_titles=False, axes=None, **kwargs):
