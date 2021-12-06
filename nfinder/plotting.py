@@ -18,11 +18,13 @@ def plot_layout(points, node_size=5, img=None, cmap='gray', color='white', ax=No
 
     else:
         if viewer is None:
-            viewer = napari.Viewer()
+            viewer = napari.Viewer(ndisplay=3)
         if img is not None:
-            viewer.add_image(img[:, :, :, 1], gamma=0.35, colormap='green', rendering='average', scale=scale, name='membrane')
-            viewer.add_image(img[:, :, :, 0], gamma=0.25, opacity=0.7, colormap='red', rendering='average', scale=scale, name='nuclei')
+            rendering = 'additive'
+            viewer.add_image(img[:, :, :, 1], gamma=0.35, colormap='green', rendering=rendering, scale=scale, name='membrane')
+            viewer.add_image(img[:, :, :, 0], gamma=0.25, opacity=0.7, colormap='red', rendering=rendering, scale=scale, name='nuclei')
         viewer.add_points(points, size=node_size/2, opacity=0.3, edge_color=color, face_color=color, scale=scale, name='centroids')
+        
         return viewer
     
     
@@ -53,6 +55,7 @@ def plot_neighbors_graph(points, edges, color='white', scale=None, ax=None, **kw
     else:
         viewer = plot_layout(points, color=color, scale=scale, **kwargs)
         viewer.add_shapes(edges, shape_type='line', opacity=0.3, edge_width=0.5, edge_color=color, name='edges', scale=scale)
+        return viewer
 
 
 def plot_overlap(img, points, edges, show_titles=False, axes=None, **kwargs):
