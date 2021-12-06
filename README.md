@@ -1,4 +1,4 @@
-# nfinder
+# Nfinder
 Automatic inference of neighboring cells based on their Delaunay triangulation.
 
 ## Dependencies 
