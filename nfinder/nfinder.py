@@ -1,12 +1,15 @@
-from . import util, plotting
+from . import util, plotting, test_images
 import numpy as np
 import pandas as pd
 from skimage.measure import regionprops
 from skimage.io import imread
 from scipy import spatial
 
+from importlib_resources import files
+
 def get(filename):
-    return imread('./test_images/'+filename)
+    path = (files('nfinder.test_images') / filename).__str__()
+    return imread(path)
        
 def data(name):
     merge_dir = 'merge_'+name+'.tif'
