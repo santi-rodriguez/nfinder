@@ -11,6 +11,9 @@ nfinder was tested with:
 - scikit-image = 0.18.3
 - scipy = 1.7.1
 
+Only if you want to use the preloaded test images of this package, you should also install
+- importlib-resources 5.4.0
+
 
 ## Installation
 
