@@ -1,0 +1,18 @@
+*~
+__pycache__
+*egg-info*
+*.pyc
+.DS_Store
+docs/_build/
+.idea
+.vscode
+build/
+dist/
+MANIFEST
+*pytest_cache*
+.eggs
+.mypy_cache
+pip-wheel-metadata
+
+# notebook stuff
+*.ipynb_checkpoints*
