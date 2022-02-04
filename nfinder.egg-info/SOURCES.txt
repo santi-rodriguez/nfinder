@@ -1,3 +1,4 @@
+.gitignore
 AUTHORS
 LICENSE
 MANIFEST.in
@@ -15,10 +16,12 @@ nfinder.egg-info/SOURCES.txt
 nfinder.egg-info/dependency_links.txt
 nfinder.egg-info/entry_points.txt
 nfinder.egg-info/top_level.txt
+nfinder/.ipynb_checkpoints/nfinder-checkpoint.py
 nfinder/plugins/__init__.py
 nfinder/plugins/find.py
 nfinder/plugins/napari.py
-test_images/merge_c_elegans.tif
-test_images/merge_drosophila.tif
-test_images/segmentation_c_elegans.tif
-test_images/segmentation_drosophila.tif
+nfinder/test_images/__init__.py
+nfinder/test_images/merge_c_elegans.tif
+nfinder/test_images/merge_drosophila.tif
+nfinder/test_images/segmentation_c_elegans.tif
+nfinder/test_images/segmentation_drosophila.tif

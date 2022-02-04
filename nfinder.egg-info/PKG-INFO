@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: nfinder
-Version: 0.1
+Version: 0.2.dev0
 Summary: Automatic inference of neighboring cells based on their Delaunay triangulation.
 Home-page: https://github.com/santi-rodriguez/nfinder
 Author: Santiago N. Rodriguez Alvarez
