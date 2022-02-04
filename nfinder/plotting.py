@@ -20,7 +20,7 @@ def plot_layout(points, node_size=5, img=None, cmap='gray', color='white', ax=No
         if viewer is None:
             viewer = napari.Viewer(ndisplay=3)
         if img is not None:
-            rendering = 'additive'
+            rendering = 'average'
             viewer.add_image(img[:, :, :, 1], gamma=0.35, colormap='green', rendering=rendering, scale=scale, name='membrane')
             viewer.add_image(img[:, :, :, 0], gamma=0.25, opacity=0.7, colormap='red', rendering=rendering, scale=scale, name='nuclei')
         viewer.add_points(points, size=node_size/2, opacity=0.3, edge_color=color, face_color=color, scale=scale, name='centroids')
