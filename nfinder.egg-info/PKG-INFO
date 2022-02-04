@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: nfinder
+Version: 0.1
+Summary: Automatic inference of neighboring cells based on their Delaunay triangulation.
+Home-page: https://github.com/santi-rodriguez/nfinder
+Author: Santiago N. Rodriguez Alvarez
+Author-email: rodriguezsantiago96@gmail.com
+License: UNKNOWN
+Description: # Nfinder
+        Automatic inference of neighboring cells based on their Delaunay triangulation.
+        
+        ## Dependencies 
+        nfinder was tested with:
+        
+        - python = 3.8.5
+        - napari = 0.4.12
+        - numpy = 1.21.2
+        - pandas = 1.3.4
+        - scikit-image = 0.18.3
+        - scipy = 1.7.1
+        
+        
+        ## Installation
+        
+        It can be installed with `pip` from PyPI:
+        
+        ```
+        pip install nfinder
+        ```
+        
+        
+        ## Usage
+        For usage examples, please check out the [notebook](https://github.com/santi-rodriguez/nfinder/blob/main/examples.ipynb) in our GitHub repository.
+        
+        
+        
+        
+Keywords: science,microscopy,image processing,cells neighbors
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: napari
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
