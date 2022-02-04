@@ -1,3 +1,0 @@
-[napari.plugin]
-nfinder = nfinder.plugins.napari
-
