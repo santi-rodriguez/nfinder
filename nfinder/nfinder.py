@@ -5,16 +5,12 @@ from skimage.measure import regionprops
 from skimage.io import imread
 from scipy import spatial
 
-from importlib_resources import files
+DATA_DIR = test_images.__file__.split('__init__.py')[0]
 
-def get(filename):
-    path = (files('nfinder.test_images') / filename).__str__()
-    return imread(path)
-       
 def data(name):
-    merge_dir = 'merge_'+name+'.tif'
-    labels_dir = 'segmentation_'+name+'.tif'
-    return get(merge_dir), get(labels_dir)
+    merge_dir = DATA_DIR + 'merge_'+name+'.tif'
+    labels_dir = DATA_DIR + 'segmentation_'+name+'.tif'
+    return imread(merge_dir), imread(labels_dir)
 
 def get_centroids(labels):
     cellprops = regionprops(labels)
