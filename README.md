@@ -10,6 +10,7 @@ nfinder was tested with:
 - pandas = 1.3.4
 - scikit-image = 0.18.3
 - scipy = 1.7.1
+- importlib-resources 5.4.0
 
 
 ## Installation
